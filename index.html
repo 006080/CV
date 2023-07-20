@@ -13,22 +13,28 @@
 
 <body>
 
-    <div class="boxHome" id="home"></div>
+    <div class="boxHome" ></div>
 
-    <nav>
+    <nav id="menu">
         <div class="navigationbar">
-        <ul class="navigation">
-            <a class="button" download="CV" href="CV.pdf" download>download cv</a>
-            <a class="nav" href="#home">home</a>
-            <a class="nav" href="#skills">skills</a>
-            <a class="nav" href="#service">service</a>
-            <a class="nav" href="#reviews">reviews</a>
-            <a class="nav" href="#contacts">contacts</a>
-        </ul>
+            <ul id="navigation" class="navigation">
+                <li class="btn-cv">
+                    <a class="button" download="CV" href="CV.pdf" download>download cv</a>
+                </li>
+                <li><a class="nav" href="#home">home</a></li>
+                <li><a class="nav" href="#skills">skills</a></li>
+                <li><a class="nav" href="#service">service</a></li>
+                <li><a class="nav" href="#reviews">reviews</a></li>
+                <li><a class="nav" href="#contacts">contacts</a></li>
+            </ul>
+            <div id="burger" class="burger">
+                <span></span>
+            </div>
+            <a class="button cv-mob" download="CV" href="CV.pdf" download>download cv</a>
         </div>
     </nav>
 
-    <div class="aside">
+    <div id="icons" class="aside">
         <div class="box2">
             <div class="icons">
                 <a href="https://www.behance.net/nataliyrodiono" target="_blank"><i
@@ -40,7 +46,7 @@
         </div>
     </div>
 
-    <section class="section">
+    <section id="home" class="section">
         <section style="margin-top: 12%;" class="section__home">
             <div style="width: 60%;" class="right">
                 <p class="name">Nataliya</p>
@@ -251,7 +257,8 @@
 
                     <div class="quot1">
                         <img style="width: 35%; margin-bottom: 9%;" src="/img/Ellipse1.png" alt="">
-                        <i style="color: honeydew; margin: 15%;" class="fa-solid fa-trophy fa-2xl"></i>
+<!--                        <i style="color: honeydew; margin: 15%;" class="fa-solid fa-trophy fa-2xl"></i>-->
+                        <i style="color: honeydew;" class="fa-solid fa-trophy fa-2xl"></i>
                         <a href="https://freelancehunt.com/contest/kvartalnyiy-kalendar-dlya-gruzovogo-tehtsentra/5417.html"
                             target="_blank" class="link">
                             <p  style="color: rgb(201, 200, 200); margin: 12%;">
@@ -282,11 +289,11 @@
                     </div>
 
                     <div class="quot3">
-                        <img style="width: 35%" src="/img/Ellipse.png" alt="">
+                        <img style="width: 35%; margin-bottom: 9%;" src="/img/Ellipse.png" alt="">
                         <i style="color: honeydew" class="fa-solid fa-trophy fa-2xl"></i>
                         <a href="https://www.youtube.com/watch?v=PPzNoMCWNik&ab_channel=FashionTV" target="_blank"
                             rel="noopener noreferrer" class="link">
-                            <p style="color: white;">Ukrainian Fashion Week Spring/Summer 2019 - VARONA by NATALIYA
+                            <p style="color: white; margin: 12%;">Ukrainian Fashion Week Spring/Summer 2019 - VARONA by NATALIYA
                                 RODIONOVA | FashionTV | FTV</p>
                         </a>
                         <img style="width: 35%" src="/img/stars-5 1.png" alt="">
@@ -332,6 +339,20 @@
                         <h3 class="footer__text">Follow Me:</h3>
                         <h4 class="footer__text__s">behance.net/nataliyrodiono</h4>
                     </div>
+                    
+                    <div class="footer-links-mob">
+                        <a href="mailto:Nataliyarodionova26@gmail.com">
+                            <div class="f"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+
+                        <a href="tel:+491639436453">
+                            <div class="f"><i class="fa-solid fa-phone"></i></div>
+                        </a>
+
+                        <a href="behance.net/nataliyrodiono">
+                            <div class="f"><i class="fa-brands fa-square-behance"></i></div>
+                        </a>
+                    </div>
                 </div>
             </footer>
             </div>
@@ -339,7 +360,58 @@
     </section>
  <div class="thanks"> 
 </div>
-        
+
+    <script src="index.js"> </script>
+
+<script>
+    const menu = document.getElementById("navigation");
+    const burger = document.getElementById("burger");
+
+    function toggleMenu() {
+        menu.classList.toggle("show");
+        burger.classList.toggle("show");
+    }
+
+    burger.addEventListener("click", toggleMenu);
+
+    const menuItems = document.querySelectorAll('a.nav');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.remove("show");
+            burger.classList.remove("show");
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        const targetElement = event.target; // Элемент, на который произошел клик
+
+        // Проверяем, был ли клик вне меню и кнопки открытия меню
+        if (!document.getElementById("menu").contains(targetElement) && targetElement !== burger) {
+            // Здесь выполняем необходимые действия для закрытия меню
+            menu.classList.remove("show");
+            burger.classList.remove("show");
+        }
+
+    });
+
+
+    function checkScroll() {
+        const blockToScroll = document.getElementById("contacts");
+        const blockRect = blockToScroll.getBoundingClientRect();
+        const elementToHide = document.getElementById("icons");
+
+        if (blockRect.top <= window.innerHeight && blockRect.bottom >= 0) {
+            elementToHide.style.display = "none";
+        } else {
+            elementToHide.style.display = "block";
+        }
+    }
+
+    if (window.innerWidth <= 767) {
+        window.addEventListener("scroll", checkScroll);
+    }
+
+</script>
 </body>
 
 </html>
