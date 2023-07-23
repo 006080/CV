@@ -828,8 +828,8 @@ form {
 
   .section__home__proff .card {
     width: 100%;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 10px;
   }
 
   .section__home__about .text {
@@ -875,7 +875,7 @@ form {
   .name {
     margin-left: 0 !important;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
   }
 
   #contacts  {
