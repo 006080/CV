@@ -227,7 +227,7 @@ img {
 
 .text__s {
   margin-top: 2%;
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-left: 5%;
   color: #ffffff;
   font-family: "BALLOON DREAMS", sans-serif;
@@ -463,13 +463,13 @@ img {
 
 .footer__text {
   margin: 3%;
-  font-size: large;
+  font-size: x-large;
   font-weight: 600;
   color: #ffffff;
 }
 
 .footer__text__s {
-  font-size: medium;
+  font-size: large;
   margin: 3%;
   font-weight: 500;
   color: #ffffff;
@@ -504,9 +504,10 @@ img {
 }
 
 #placeholder {
+  font-size: medium;
   margin-bottom: 0%;
   border-radius: 30px;
-  padding: 15px;
+  padding: 25px;
   border: none;
 }
 
