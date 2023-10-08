@@ -782,6 +782,10 @@ form {
     max-width: 290px;
   }
 
+  .language-dropdown {
+    position: fixed;
+  }
+
   .section__home {
     margin-top: 0 !important;
   }
