@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,29 +8,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script src="index.js" defer></script>
+    <script src="./index.js"></script>
+    <script src="./translate.js"></script>
 </head>
 
 <body>
 
-    <div class="boxHome" ></div>
+    <div class="boxHome"></div>
 
     <nav id="menu">
         <div class="navigationbar">
+            <div class="language-dropdown">
+                <button class="dropdown-toggle" id="dropdown-toggle">en</button>
+                <ul class="dropdown-list" id="dropdown-list">
+                    <li><a href="#" data-lang="en">English</a></li>
+                    <li><a href="#" data-lang="ru">Russian</a></li>
+                    <li><a href="#" data-lang="it">Italian</a></li>
+                    <li><a href="#" data-lang="de">German</a></li>
+                </ul>
+            </div>
+
             <ul id="navigation" class="navigation">
                 <li class="btn-cv">
-                    <a class="button" download="CV" href="CV.pdf" download>download cv</a>
+                    <a id="CV" class="button" download="CV" href="./CV Nataliya_Rodionova.pdf" download>download cv</a>
                 </li>
-                <li><a class="nav" href="#home">home</a></li>
-                <li><a class="nav" href="#skills">skills</a></li>
-                <li><a class="nav" href="#service">service</a></li>
-                <li><a class="nav" href="#reviews">reviews</a></li>
-                <li><a class="nav" href="#contacts">contacts</a></li>
+                <li><a id="nhome" class="nav" href="#home">home</a></li>
+                <li><a id="nskills" class="nav" href="#skills">skills</a></li>
+                <li><a id="nservice" class="nav" href="#service">service</a></li>
+                <li><a id="nreviews" class="nav" href="#reviews">reviews</a></li>
+                <li><a id="ncontacts" class="nav" href="#contacts">contacts</a></li>
             </ul>
+
             <div id="burger" class="burger">
                 <span></span>
             </div>
-            <a class="button cv-mob" download="CV" href="./CV Nataliya_Rodionova.pdf" download>download cv</a>
+            <a id="CV" class="button cv-mob" download="CV" href="./CV Nataliya_Rodionova.pdf" download>download cv</a>
         </div>
     </nav>
 
@@ -53,19 +65,23 @@
                 <p class="name">Rodionova</p>
                 <div class="section__home__proff">
                     <div style="background-color:  #99cccc" class="card">
-                        <h5 style="font-family: 'Poppins', sans-serif;">DESIGNER</h5>
+                        <h5  id="design" style="font-family: 'Fira Sans', sans-serif;
+font-weight: 600;">DESIGNER</h5>
                     </div>
                     <div style="background-color: #ff9933;" class="card">
-                        <h5 style="font-family: 'Poppins', sans-serif;">ILLUSTRATOR</h5>
+                        <h5 id="Illustrator" style="font-family: 'Fira Sans', sans-serif;
+font-weight: 600;">ILLUSTRATOR</h5>
                     </div>
-                    <div style="background-color: #003399;" class="card">
-                        <h5 style="font-family: 'Poppins', sans-serif;">WEB DEVELOPER</h5>
+                    <div  style="background-color: #003399;" class="card">
+                        <h5 id="developer" style="font-family: 'Fira Sans', sans-serif;
+font-weight: 600;">WEB DEVELOPER</h5>
                     </div>
 
                 </div>
                 <div class="section__home__about">
                     <div class="text">
-                        <p style="padding: 1.5%;">Hi. My name is Nataliya Rodionova. I have studied Design at Marangoni
+                        <p id="greeting" style="padding: 1.5%;">Hi. My name is Nataliya Rodionova. I have studied Design
+                            at Marangoni
                             Institute in Milan. After graduating I worked
                             as a stylist and seller in a Multicultural capital of Fashion and then after the pandemic I
                             worked for 5 years as a
@@ -256,12 +272,12 @@
                 <div style="width: 100%;" class="quotation">
 
                     <div class="quot1">
-                          <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse3.png" alt="">
-<!--                        <i style="color: honeydew; margin: 15%;" class="fa-solid fa-trophy fa-2xl"></i>-->
+                        <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse3.png"
+                            alt="">
                         <i style="color: honeydew; margin: 9%;" class="fa-solid fa-trophy fa-2xl"></i>
                         <a href="https://freelancehunt.com/contest/kvartalnyiy-kalendar-dlya-gruzovogo-tehtsentra/5417.html"
                             target="_blank" class="link">
-                            <p  style="color: rgb(201, 200, 200); margin: 12%;">
+                            <p style="color: rgb(201, 200, 200); margin: 12%;">
                                 Natalia fulfilled all the requirements and took into account all the comments with
                                 adjustments.
                                 We would lke to note Natalia's customer focus, and the desire to bring the project to
@@ -273,11 +289,13 @@
                     </div>
 
                     <div class="quot2">
-                        <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse1.png" alt="">
+                        <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse1.png"
+                            alt="">
                         <i style="color: honeydew; margin: 9%;" class="fa-solid fa-trophy fa-2xl"></i>
                         <a href="http://freelancehunt.com/contest/razrabotka-logotipa-firmennogo-stilya-dlya/5414.html"
                             target="_blank" class="link">
-                            <p style="color: rgb(255, 255, 255); margin: 12%;">I thank Natalia for the work done, with inspiration
+                            <p style="color: rgb(255, 255, 255); margin: 12%;">I thank Natalia for the work done, with
+                                inspiration
                                 and with full dedication!
                                 The designer has a special flair and the highest level of aesthetic vision and
                                 professionalism.
@@ -288,20 +306,24 @@
                     </div>
 
                     <div class="quot3">
-                        <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse.png" alt="">
+                        <img class="ava" style="width: 35%; margin-bottom: 9%; margin-top: 9%;" src="./img/Ellipse.png"
+                            alt="">
                         <i style="color: honeydew; margin: 9%;" class="fa-solid fa-trophy fa-2xl"></i>
                         <a href="https://www.youtube.com/watch?v=PPzNoMCWNik&ab_channel=FashionTV" target="_blank"
                             rel="noopener noreferrer" class="link">
-                            <p style="color: white; margin: 12%;">Ukrainian Fashion Week Spring/Summer 2019 - VARONA by NATALIYA
+                            <p style="color: white; margin: 12%;">Ukrainian Fashion Week Spring/Summer 2019 - VARONA by
+                                NATALIYA
                                 RODIONOVA | FashionTV | FTV</p>
                         </a>
                         <img style="width: 35%; margin-bottom: 9%;" src="./img/stars-5 1.png" alt="">
                     </div>
 
                     <div class="quot4">
-                        <img class="ava" style="width: 35%; margin-bottom: 9%;margin-top: 9%;" src="./img/Ellipse4.png" alt="">
+                        <img class="ava" style="width: 35%; margin-bottom: 9%;margin-top: 9%;" src="./img/Ellipse4.png"
+                            alt="">
                         <i style="margin: 9%;" class="fa-solid fa-quote-right fa-2xl"></i>
-                        <p style="color: rgb(2, 2, 2); margin: 12%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p style="color: rgb(2, 2, 2); margin: 12%;">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
                             Adipisci quia </p>
                         <img style="width: 35%; margin-bottom: 9%;" src="./img/stars-5 2.png" alt="">
                     </div>
@@ -329,7 +351,7 @@
                         <form action="">
                             <textarea name="message" id="placeholder" cols="40" placeholder="Your mesage here..."
                                 rows="10"></textarea>
-                            <button class='bbutton'>Send</button>
+                            <button id="send_button" class='bbutton'>Send</button>
                         </form>
                     </div>
 
@@ -338,7 +360,7 @@
                         <h3 class="footer__text">Follow Me:</h3>
                         <h4 class="footer__text__s">behance.net/nataliyrodiono</h4>
                     </div>
-                    
+
                     <div class="footer-links-mob">
                         <a href="mailto:Nataliyarodionova26@gmail.com">
                             <div class="f"><i class="fa-solid fa-envelope"></i></div>
@@ -357,60 +379,58 @@
             </div>
         </section>
     </section>
- <div class="thanks"> 
-</div>
+    <div class="thanks">
+    </div>
 
-    <script src="index.js"> </script>
+    <script>
+        const menu = document.getElementById("navigation");
+        const burger = document.getElementById("burger");
 
-<script>
-    const menu = document.getElementById("navigation");
-    const burger = document.getElementById("burger");
+        function toggleMenu() {
+            menu.classList.toggle("show");
+            burger.classList.toggle("show");
+        }
 
-    function toggleMenu() {
-        menu.classList.toggle("show");
-        burger.classList.toggle("show");
-    }
+        burger.addEventListener("click", toggleMenu);
 
-    burger.addEventListener("click", toggleMenu);
-
-    const menuItems = document.querySelectorAll('a.nav');
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            menu.classList.remove("show");
-            burger.classList.remove("show");
+        const menuItems = document.querySelectorAll('a.nav');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.remove("show");
+                burger.classList.remove("show");
+            });
         });
-    });
 
-    document.addEventListener("click", function (event) {
-        const targetElement = event.target; // Элемент, на который произошел клик
+        document.addEventListener("click", function (event) {
+            const targetElement = event.target; // Элемент, на который произошел клик
 
-        // Проверяем, был ли клик вне меню и кнопки открытия меню
-        if (!document.getElementById("menu").contains(targetElement) && targetElement !== burger) {
-            // Здесь выполняем необходимые действия для закрытия меню
-            menu.classList.remove("show");
-            burger.classList.remove("show");
+            // Проверяем, был ли клик вне меню и кнопки открытия меню
+            if (!document.getElementById("menu").contains(targetElement) && targetElement !== burger) {
+                // Здесь выполняем необходимые действия для закрытия меню
+                menu.classList.remove("show");
+                burger.classList.remove("show");
+            }
+
+        });
+
+
+        function checkScroll() {
+            const blockToScroll = document.getElementById("contacts");
+            const blockRect = blockToScroll.getBoundingClientRect();
+            const elementToHide = document.getElementById("icons");
+
+            if (blockRect.top <= window.innerHeight && blockRect.bottom >= 0) {
+                elementToHide.style.display = "none";
+            } else {
+                elementToHide.style.display = "block";
+            }
         }
 
-    });
-
-
-    function checkScroll() {
-        const blockToScroll = document.getElementById("contacts");
-        const blockRect = blockToScroll.getBoundingClientRect();
-        const elementToHide = document.getElementById("icons");
-
-        if (blockRect.top <= window.innerHeight && blockRect.bottom >= 0) {
-            elementToHide.style.display = "none";
-        } else {
-            elementToHide.style.display = "block";
+        if (window.innerWidth <= 767) {
+            window.addEventListener("scroll", checkScroll);
         }
-    }
 
-    if (window.innerWidth <= 767) {
-        window.addEventListener("scroll", checkScroll);
-    }
-
-</script>
+    </script>
 </body>
 
 </html>

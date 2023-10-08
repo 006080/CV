@@ -1,6 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/balloon-dreams");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Poppins:wght@700;900&display=swap');
 
 * {
   padding: 0;
@@ -21,6 +20,53 @@ body {
   min-width: 1200px;
   background-size: cover;
   background-image: linear-gradient(30deg, rgb(46, 49, 46), rgb(12, 12, 12), rgb(35, 39, 35), rgb(20, 19, 19), rgb(27, 25, 25));
+}
+
+.dropdown-toggle {
+  background-color: #fff;
+  padding: 6px 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dropdown-list {
+  width: 120px;
+  margin: 5px 17px;
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
+.language-dropdown {
+  position: absolute;
+  padding: 19px;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown-list li:hover {
+  border-radius: 16px;
+  margin: 0px;
+  background-color: #f4f4f4;
+}
+
+
+.dropdown-list li {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.dropdown-list li a {
+  padding: 1px 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 
@@ -108,6 +154,7 @@ nav {
   color: var(--white);
   background: hsl(0 0% 0% / 0.1);
   backdrop-filter: blur(1rem);
+    border-bottom: 1px solid #9b9b9b1a;
 }
 
 .navigation {
@@ -137,8 +184,8 @@ h5 {
 }
 
 .nav {
-font-family: 'Poppins', sans-serif;
-font-weight: 900;
+font-family: 'Fira Sans', sans-serif;
+font-weight: 600;
   text-decoration: none;
   color: var(--white);
   padding: 5px;
@@ -147,9 +194,7 @@ font-weight: 900;
 }
 
 .nav:hover {
-  padding: 5px;
-  border: 1px solid var(--heavenly);
-  border-radius: 30px;
+  color: #99cccc;
 }
 
 .name {
@@ -469,7 +514,7 @@ img {
 }
 
 .footer__text {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Fira Sans', sans-serif;
   margin: 3%;
   font-size: x-large;
   font-weight: 900;
@@ -477,7 +522,8 @@ img {
 }
 
 .footer__text__s {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Fira Sans', sans-serif;
+font-weight: 600;
   font-size: large;
   font-weight: 700;
   margin: 3%;
@@ -648,8 +694,8 @@ form {
     min-width: unset;
   }
 
-   .quotation > p {
-  font-size: xx-large;
+  .quotation>p {
+    font-size: xx-large;
   }
 
 
@@ -695,7 +741,7 @@ form {
     width: 100%;
   }
 
- 
+
 
   .footer {
     flex-direction: column;
@@ -832,6 +878,7 @@ form {
   .navigationbar .burger.show::before {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   .navigationbar .burger.show::after {
     transform: translate(-50%, -50%) rotate(45deg);
   }
@@ -853,6 +900,7 @@ form {
   .section__home__about .text {
     padding: 10px;
   }
+
   .programms {
     gap: 5px;
     justify-content: space-between;
@@ -877,12 +925,13 @@ form {
   }
 
   .quotation p {
-  font-size: medium;
+    font-size: medium;
   }
 
   .service__wrapper__card {
     width: 100%;
   }
+
   .skills .text__s {
     margin-top: 70px !important;
   }
@@ -900,7 +949,7 @@ form {
     font-size: 35px;
   }
 
-  #contacts  {
+  #contacts {
     padding-top: 60px;
   }
 
@@ -934,8 +983,8 @@ form {
     margin-top: 20px;
   }
 
-  .footer .block2 .f, 
-  .footer .block2 h3, 
+  .footer .block2 .f,
+  .footer .block2 h3,
   .footer .block2 h4 {
     display: none;
   }
