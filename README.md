@@ -2,4 +2,4 @@
 
 >Follow the link below:
 
-[Nataliya Rodionova's CV] (https://006080.github.io/CV)
+[Nataliya Rodionova's CV](http://006080.github.io/CV)
