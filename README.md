@@ -1,6 +1,6 @@
 # Welcome to my WEB CV
 
->Follow the link below🎈 :
+>Follow the link 🎈 below:
 
 [Nataliya Rodionova's CV](http://006080.github.io/CV) 
 
