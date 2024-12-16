@@ -22,6 +22,57 @@ body {
   background-image: linear-gradient(30deg, rgb(46, 49, 46), rgb(12, 12, 12), rgb(35, 39, 35), rgb(20, 19, 19), rgb(27, 25, 25));
 }
 
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.portfolio-item {
+  margin: 10px;
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.705);
+  /* Slight dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-item .link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+}
+
 .dropdown-toggle {
   background-color: #fff;
   padding: 6px 15px;
@@ -154,7 +205,7 @@ nav {
   color: var(--white);
   background: hsl(0 0% 0% / 0.1);
   backdrop-filter: blur(1rem);
-    border-bottom: 1px solid #9b9b9b1a;
+  border-bottom: 1px solid #9b9b9b1a;
 }
 
 .navigation {
@@ -184,8 +235,8 @@ h5 {
 }
 
 .nav {
-font-family: 'Fira Sans', sans-serif;
-font-weight: 600;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
   text-decoration: none;
   color: var(--white);
   padding: 5px;
@@ -277,7 +328,34 @@ img {
   width: 40%;
 }
 
+@keyframes moveTitle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  10% {
+    transform: translateX(20px) translateY(-10px);
+  }
+
+  25% {
+    transform: translateX(-15px) translateY(15px);
+  }
+
+  100% {
+    transform: translateX(50px) translateY(30px);
+  }
+
+  75% {
+    transform: translateX(-75px) translateY(-20px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
 .text__s {
+  animation: moveTitle 14s ease-in-out infinite;
   margin-top: 2%;
   font-size: 4rem;
   margin-left: 5%;
@@ -509,12 +587,12 @@ img {
   margin: 0;
 }
 
-#contacts {
-  padding-top: 105px;
+#portfolio {
+  padding-top: 250px;
 }
 
 .footer__text {
-font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   margin: 3%;
   font-size: x-large;
   font-weight: 900;
@@ -522,8 +600,8 @@ font-family: 'Fira Sans', sans-serif;
 }
 
 .footer__text__s {
-font-family: 'Fira Sans', sans-serif;
-font-weight: 600;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
   font-size: large;
   font-weight: 700;
   margin: 3%;
@@ -778,6 +856,27 @@ form {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .portfolio-item {
+    margin: 0px;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #portfolio {
+    padding-top: 0;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
   .section__home .left {
     max-width: 290px;
   }
