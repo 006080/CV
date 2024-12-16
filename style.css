@@ -109,12 +109,12 @@ body {
 
 
 .dropdown-list li {
-  padding: 10px 20px;
+  padding: 20px;
   text-align: left;
 }
 
 .dropdown-list li a {
-  padding: 1px 10px;
+  padding: 20px;
   text-decoration: none;
   color: #333;
   display: block;
@@ -206,17 +206,27 @@ nav {
   background: hsl(0 0% 0% / 0.1);
   backdrop-filter: blur(1rem);
   border-bottom: 1px solid #9b9b9b1a;
+  border-bottom: 1px solid rgba(219, 219, 219, 0.288);
 }
 
 .navigation {
-  padding: 19px;
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 52%;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+
+.navigationbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  width: 100%;
-  max-width: 850px;
-  /*margin-left: 55%;*/
+  max-width: 100%;
   margin-left: auto;
   margin-right: 20px;
 }
@@ -849,7 +859,7 @@ form {
   }
 
   .text__s {
-    margin-left: 0 !important;
+    margin: 10px;
     text-align: center;
     font-size: 3rem;
   }
@@ -862,7 +872,7 @@ form {
     position: relative;
     background-color: #000;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -873,7 +883,7 @@ form {
   .portfolio-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
   }
 
