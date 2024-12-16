@@ -22,6 +22,22 @@ body {
   background-image: linear-gradient(30deg, rgb(46, 49, 46), rgb(12, 12, 12), rgb(35, 39, 35), rgb(20, 19, 19), rgb(27, 25, 25));
 }
 
+.demoButton {
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.demoButton:hover {
+  color: #000;
+  padding: 8px 19px;
+  border-radius: 30px;
+  background-color: #ffffff;
+
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

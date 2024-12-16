@@ -35,7 +35,7 @@
                 <li><a id="nhome" class="nav" href="#home">HOME</a></li>
                 <li><a id="nskills" class="nav" href="#skills">SKILLS</a></li>
                 <li><a id="nservice" class="nav" href="#service">SERVICE</a></li>
-                <li><a id="nservice" class="nav" href="#portfolio">PORTFOLIO</a></li>
+                <li><a id="nportfolio" class="nav" href="#portfolio">PORTFOLIO</a></li>
                 <li><a id="nreviews" class="nav" href="#reviews">REVIEWS</a></li>
                 <li><a id="ncontacts" class="nav" href="#contacts">CONTACTS</a></li>
             </ul>
@@ -78,7 +78,13 @@
                 </div>
                 <div class="section__home__about">
                     <div class="text">
-                        <p id="greeting" style="padding: 1.5%;">Hello. My name is Natalya. I am a multidisciplinary designer. I started my career as a fashion designer. After graduating from fashion school in Milan, I had experience in many large companies such as Dolce Gabbana and Marni. Unfortunately, with the advent of the pandemic in 2018, I had to change my profile and became interested in digital. During the lockdown period, I began working as a freelancer, developing labels, banners, logos, and corporate styles and working on web design. Having graduated from DCI school this year as a web developer, I gained skills in HTML, CSS, JavaScript, and React and also became familiar with the basics of backend. I am currently looking for a company where I could get good experience as a young specialist in web/development or web/design. I am confident that my experience in sales, the skills acquired at the DSI school, and my 10 years of experience as a designer can give the company many advantages and make a website or application genuinely unique.</p>
+                        <p id="greeting" style="padding: 1.5%;">Hello, my name is Natalya, and I am a multidisciplinary designer with a diverse background. I began my career as a fashion designer after graduating from a prestigious fashion school in Milan. I had the privilege of working with renowned companies like Dolce & Gabbana and Marni, gaining invaluable experience in the industry.
+
+                            In 2018, with the onset of the pandemic, I transitioned into digital design. During the lockdown, I worked as a freelancer, creating labels, banners, logos, corporate styles, and web designs. This period sparked my passion for digital platforms and web development.
+                            
+                            I completed my studies at DCI School and ReDI School as a web developer, acquiring solid skills in HTML, CSS, JavaScript, and React, along with foundational knowledge of backend technologies. I am now eager to contribute to a forward-thinking company where I can grow as a specialist in web development or web design.
+                            
+                            With over 10 years of experience as a designer, coupled with my newly acquired technical skills and sales background, I am confident in my ability to deliver unique and impactful solutions. My aim is to create websites and applications that stand out and truly resonate with users.</p>
                     </div>
                 </div>
             </div>
@@ -248,22 +254,30 @@
                     <div class="portfolio-item">
                         <video autoplay muted loop src="airbnb.mp4" controls></video>
                         <div class="overlay"></div>
-                        <a href="https://f24-web-circle-berlin.netlify.app/" class="link" target="_blank"></a>
+                        <a href="https://f24-web-circle-berlin.netlify.app/" class="link" target="_blank">
+                            <button class="demoButton">DEMO</button>
+                        </a>
                     </div>
                     <div class="portfolio-item">
                         <video autoplay muted loop src="varona.mp4" controls></video>
                         <div class="overlay"></div>
-                        <a href="https://www.nataliyarodionova.com/" class="link" target="_blank"></a>
+                        <a href="https://www.nataliyarodionova.com/" class="link" target="_blank">
+                            <button class="demoButton">DEMO</button>
+                        </a>
                     </div>
                     <div class="portfolio-item">
                         <video autoplay muted loop src="moneyminder.mp4" controls></video>
                         <div class="overlay"></div>
-                        <a href="https://money-minder-app-v1.onrender.com/home" class="link" target="_blank"></a>
+                        <a href="https://money-minder-app-v1.onrender.com/home" class="link" target="_blank">
+                            <button class="demoButton">DEMO</button>
+                        </a>
                     </div>
                     <div class="portfolio-item">
                         <video autoplay muted loop src="project4.mp4" controls></video>
                         <div class="overlay"></div>
-                        <a href="https://link-to-project4.com" class="link" target="_blank">View Project 4</a>
+                        <a href="https://link-to-project4.com" class="link" target="_blank">
+                            <button class="demoButton">DEMO</button>
+                        </a>
                     </div>
                 </section>
 
@@ -419,7 +433,7 @@
 
         function toggleMenu() {
             menu.classList.toggle("show");
-            burger.classList.toggle("show");
+            
         }
 
         burger.addEventListener("click", toggleMenu);
@@ -428,7 +442,7 @@
         menuItems.forEach(item => {
             item.addEventListener('click', () => {
                 menu.classList.remove("show");
-                burger.classList.remove("show");
+                
             });
         });
 
@@ -439,27 +453,10 @@
             if (!document.getElementById("menu").contains(targetElement) && targetElement !== burger) {
                 // Здесь выполняем необходимые действия для закрытия меню
                 menu.classList.remove("show");
-                burger.classList.remove("show");
+               
             }
 
         });
-
-
-        function checkScroll() {
-            const blockToScroll = document.getElementById("contacts");
-            const blockRect = blockToScroll.getBoundingClientRect();
-            const elementToHide = document.getElementById("icons");
-
-            if (blockRect.top <= window.innerHeight && blockRect.bottom >= 0) {
-                elementToHide.style.display = "none";
-            } else {
-                elementToHide.style.display = "block";
-            }
-        }
-
-        if (window.innerWidth <= 767) {
-            window.addEventListener("scroll", checkScroll);
-        }
 
     </script>
 </body>
