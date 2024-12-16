@@ -109,12 +109,11 @@ body {
 
 
 .dropdown-list li {
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 
 .dropdown-list li a {
-  padding: 20px;
   text-decoration: none;
   color: #333;
   display: block;
@@ -866,6 +865,11 @@ form {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .dropdown-list li {
+    padding: 10px;
+    text-align: left;
+  }
 
   .portfolio-item {
     margin: 0px;
