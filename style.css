@@ -51,7 +51,7 @@ body {
   position: relative;
   background-color: #000;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 13px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -892,7 +892,7 @@ form {
     position: relative;
     background-color: #000;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 13px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
