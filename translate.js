@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 'conversation': '',
                 'send_button': 'Отправить',
                 'footer_text': '',
-                'placeholder': "Ваше сообщение здесь..."
             },
 
             'de': {
